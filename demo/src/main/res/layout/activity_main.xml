@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<include layout="@layout/main" />
+	
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="65dp"
+		android:background="#EFEFF0"
+		android:fitsSystemWindows="true"
+		app:contentInsetStart="0dp"
+		app:popupTheme="@style/AppTheme.AppBarOverlay"
+		app:titleTextAppearance="@style/ToolbarTitle">
+	
+		<LinearLayout
+			android:gravity="bottom"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#EFEFF0">
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingBottom="13dp"
+			android:gravity="center">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingTop="2dp"
+				android:textSize="15sp"
+				android:textColor="#484848"
+				android:text="调试"
+				android:textStyle="bold"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="bottom">
+
+			<View
+				android:background="#F2B6B6B6"
+				android:gravity="bottom"
+				android:layout_width="match_parent"
+				android:layout_height="0.4dp"/>
+
+		</LinearLayout>
+		
+		</LinearLayout>
+		
+	</android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,44 @@
+<selector 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"> <!-- pressed the button status -->
+		<shape>
+
+            <!-- 开始颜色="" 结束颜色="" 颜色渐变="" -->
+            <gradient android:angle="270" android:endColor="#FFE6E6E6" android:startColor="#FFE6E6E6" />
+
+
+            <corners 
+				android:topLeftRadius="0dp" 
+				android:bottomLeftRadius="3dp"/>
+            <!-- //半径    内边距="" 按钮文字和边缘距离="" -->
+            <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
+        </shape></item>
+    <item android:state_focused="true"> <!-- get the focus button sttaus -->
+		<shape>
+            <gradient android:angle="270" android:endColor="#FFE6E6E6" android:startColor="#FFE6E6E6" />
+
+         
+
+            <corners 
+				android:topLeftRadius="0dp" 
+				android:bottomLeftRadius="3dp"/>
+
+            <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
+        </shape></item>
+    <item> <!-- no focus the button status(the normal status button) -->
+		<shape>
+            <gradient android:angle="270" android:endColor="#FFF2F2F2" android:startColor="#FFF2F2F2" />
+
+           
+
+            <corners 
+				android:topLeftRadius="0dp" 
+				android:bottomLeftRadius="3dp"/>
+
+            <padding android:bottom="0dp" android:left="0dp" android:right="0dp" android:top="0dp" />
+        </shape></item>
+
+</selector>
+
+

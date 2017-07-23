@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+    <item name="android:windowNoTitle">true</item>
+        <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+   	</style>
+   <style name="CustomDialog" parent="@android:style/Theme.DeviceDefault.Light">
+   <item name="android:textCursorDrawable">@drawable/color_cursor</item>
+    <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+       <item name="android:windowNoTitle">true</item>
+    <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+     <item name="android:windowAnimationStyle">@style/dialogWindowAnim</item> 
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
+    <style name="dialogWindowAnim" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+    	    <style name="DialogTitle">
+        <item name="android:textSize">14.5sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+	<style name="Lite.Animation.Toast" parent="@android:style/Animation.Toast">
+		<item name="android:windowEnterAnimation">@anim/toast_enter</item>
+		<item name="android:windowExitAnimation">@anim/toast_exit</item>
+	</style>
+</resources>
