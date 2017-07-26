@@ -28,6 +28,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.miui8.widget.MIUIDialog;
+import java.util.*;
+import com.miui8.widget.*;
+import android.util.*;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener
 {
@@ -42,22 +45,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 		mToolbar = (Toolbar) findViewById(R.id.toolbar);
 		mToolbar.setTitle("");
 		setSupportActionBar(mToolbar);
-		
-//		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//		setSupportActionBar(toolbar);
-//		toolbar.setTitle("调试");
-        //设置无标题
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //透明状态栏
-        //getWindow().
 		Window window = getWindow();
-
-		//window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 		window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-		//window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 		window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-
-        
 
         one=(Button)findViewById(R.id.one);
         one.setOnClickListener(this);
@@ -80,23 +70,21 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         multiChoice=(Button)findViewById(R.id.multi_choices_dialog);
         multiChoice.setOnClickListener(this);
 
-		// Button bt1=(Button)findViewById(R.id.bt1);
-
     }
     @Override
     public void onClick(View p1)
     {
-        // TODO: Implement this method
         SharedPreferences sp=getSharedPreferences("single_choice_item",Context.MODE_PRIVATE);
         final SharedPreferences.Editor edit=sp.edit();
+		
         switch(p1.getId()){
             case R.id.one:
                 final MIUIDialog a=new MIUIDialog(MainActivity.this);
-                a.setTitle("提示信息"); //设置对话框标题
-                a.setMessage("文本内容"); //设置对话框信息
+                a.setTitle("Title"); //设置对话框标题
+                a.setMessage("This Is Message"); //设置对话框信息
 				//a.setCanceledOnTouchOutside(true); //设置对话框是否可以触摸关闭
 				//a.setCancelable(true); //设置对话框是否可以点击返回键关闭
-                a.setPositiveButton("确定", new OnClickListener(){
+                a.setPositiveButton("Ok", new OnClickListener(){
                 //设置对话框按钮
 					@Override
                         public void onClick(View p1)
@@ -107,13 +95,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
                     });
                 a.show(); //显示对话框
                 break;
+				
              case R.id.two:
                 final MIUIDialog b=new MIUIDialog(MainActivity.this);
-                b.setTitle("提示信息");
-                b.setMessage("文本内容");
+                b.setTitle("Title");
+                b.setMessage("This Is Message");
 				b.setCanceledOnTouchOutside(false);
-                b.setNeutralButton("取消",null);
-                b.setPositiveButton("确定", new OnClickListener(){
+                b.setNeutralButton("Cancel",null);
+                b.setPositiveButton("Ok", new OnClickListener(){
 
                         @Override
                         public void onClick(View p1)
@@ -124,14 +113,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
                     });
                 b.show();
                break;
+			   
             case R.id.three:
                 final MIUIDialog c=new MIUIDialog(MainActivity.this);
-                c.setTitle("提示信息");
-                c.setMessage("文字内容");
+                c.setTitle("Title");
+                c.setMessage("This Is Message");
 				c.setCanceledOnTouchOutside(false);
-                c.setNeutralButton("按钮",null);
-                c.setNegativeButton("按钮",null);
-                c.setPositiveButton("按钮", new OnClickListener(){
+                c.setNeutralButton("Button",null);
+                c.setNegativeButton("Button",null);
+                c.setPositiveButton("Button", new OnClickListener(){
 
                         @Override
                         public void onClick(View p1)
@@ -142,15 +132,18 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
                     });
                 c.show();
                break;
+			   
             case R.id.view_dialog:
-               // ImageView image=new ImageView(MainActivity.this);
+				//设置控件
+                //ImageView image=new ImageView(MainActivity.this);
                 //image.setImageResource(R.drawable.ic_launcher);
                 final MIUIDialog d=new MIUIDialog(MainActivity.this);
-                d.setTitle("提示信息");
-                d.setView(R.layout.test);
+                d.setTitle("Title");
+                d.setView(R.layout.test); //设置布局
+				//d.setView(image); //设置控件
 				d.setCanceledOnTouchOutside(false);
-                d.setNegativeButton("取消",null);
-                d.setPositiveButton("确定", new OnClickListener(){
+                d.setNegativeButton("Cancel",null);
+                d.setPositiveButton("Ok", new OnClickListener(){
 
                         @Override
                         public void onClick(View p1)
@@ -161,14 +154,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
                     });
                 d.show();
                 break;
+				
            case R.id.edit_dialog:
                 final MIUIDialog e=new MIUIDialog(MainActivity.this);
-                e.setTitle("提示信息");
-				//e.setMessage("文本内容");
-                e.setEditText("","请输入文字");
+                e.setTitle("Title");
+				//e.setMessage("This Is Message");
+                e.setEditText("Text","Hint");
 				e.setCanceledOnTouchOutside(false);
-                e.setNegativeButton("取消",null);
-                e.setPositiveButton("确定", new OnClickListener(){
+                e.setNegativeButton("Cancel",null);
+                e.setPositiveButton("Ok", new OnClickListener(){
 
                         @Override
                         public void onClick(View p1)
@@ -178,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 							//关闭对话框
 							if("".equals(e.getEditText().toString().trim()))
 							{ //判断输入框内是否有内容
-						    Toast.makeText(MainActivity.this, "你还没有输入文字",0).show();
+						    //Toast.makeText(MainActivity.this, "你还没有输入文字",0).show();
 						    }else{ //如果有内容则
                             Toast.makeText(MainActivity.this,e.getEditText(),0).show();
 							}
@@ -186,15 +180,27 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
                     });
                 e.show();
                break;
+			   
             case R.id.single_choice_dialog:
                 final MIUIDialog g=new MIUIDialog(MainActivity.this);
-                g.setTitle("提示信息");
+                g.setTitle("Title");
 				g.setCanceledOnTouchOutside(false);
-				//使用方法1
+				
+				//使用方法：
                 //final List<String> lg=new ArrayList<>();
-                //for(int i=0;i<6;i++){ lg.add("选项 "+i); }
-				//使用方法2
-                final String[] lg = new String[] { "选项0", "选项1", "选项2", "选项3" ,"选项4" };
+                //for(int i=0;i<8;i++){ lg.add("Item "+i); }
+				
+				//final List<String> lg=new ArrayList<>();
+                //{ lg.add("Item0"); 
+				//	lg.add("Item1"); 
+				//	lg.add("Item2"); 
+				//	lg.add("Item3"); 
+				//	lg.add("Item4");
+				//	lg.add("Item5"); 
+				//	lg.add("Item6");
+				//	lg.add("Item7"); }
+				
+                final String[] lg = new String[] {"Item0","Item1","Item2","Item3","Item4","Item5","Item6","Item7"};
                 g.setSingleChoiceItems(sp.getInt("item", 0), lg, new OnItemClickListener(){
 
                         @Override
@@ -203,54 +209,60 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
 							g.dismiss();
                             // 设置列表选项点击事件
                             edit.putInt("item",p3).commit();
-							//Toast.makeText(MainActivity.this,lg.get(p3),0).show(); //方法1
-                            Toast.makeText(MainActivity.this,"已选择:"+lg[p3],0).show(); //方法2
+							Toast.makeText(MainActivity.this,lg[p3],0).show();
+						
                         }
                     });
-                //g.setPositiveButton("取消", null);
+                //g.setPositiveButton("Cancel", null);
                 g.show();
                 break;
+				
             case R.id.multi_choices_dialog:
                 final MIUIDialog h=new MIUIDialog(MainActivity.this);
-                h.setTitle("提示信息");
+                h.setTitle("Title");
 				h.setCanceledOnTouchOutside(false);
-				//使用方法1
+				
+				//使用方法：
                 //final List<String> lh=new ArrayList<>();
-                //for(int i=0;i<6;i++){ lh.add("选项 "+i); }
-				//使用方法2
-				final String[] lh = new String[] { "选项0", "选项1", "选项2", "选项3" ,"选项4"};
+                //for(int i=0;i<6;i++){ lh.add("Item"+i); }
+				
+				//final List<String> lh=new ArrayList<>();
+                //{ lh.add("Item0"); 
+				//  lh.add("Item1"); 
+			    //  lh.add("Item2"); 
+				//  lh.add("Item3"); 
+				//  lh.add("Item4");
+			    //  lh.add("Item5");  }
+				
+				final String[] lh = new String[] {"Item0","Item1","Item2","Item3","Item4","Item5"};
                 h.setMultiChoiceItems(sp.getInt("item",0), lh, new OnItemClickListener(){
 
                         @Override
                         public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
                         {
                             // 设置列表选项点击事件
-							edit.putInt("item",p3).commit();
-                            //Toast.makeText(MainActivity.this,lh.get(p3),0).show(); //方法1
-							Toast.makeText(MainActivity.this,lh[p3],0).show(); //方法2
-							
-                        }
-                 });
-                h.setNegativeButton("取消", new OnClickListener(){
+							Toast.makeText(MainActivity.this,lh[p3],0).show();
+						}
+                          });
+                h.setNegativeButton("Cancel", new OnClickListener(){
 
                         @Override
                         public void onClick(View p1)
                         {
 							// TODO: Implement this method
 							h.dismiss();
-							Toast.makeText(MainActivity.this,"已取消",0).show();
+							//Toast.makeText(MainActivity.this,"已取消",0).show();
                         }
 					});
-                h.setPositiveButton("确定", new OnClickListener(){
+                h.setPositiveButton("Ok", new OnClickListener(){
 
                         @Override
                         public void onClick(View p1)
                         {
-							// TODO: Implement this method
-                            h.dismiss();
-							
-                        }
-                });
+							h.dismiss();
+						}
+					});
+		
                 h.show();
                 break;
 		

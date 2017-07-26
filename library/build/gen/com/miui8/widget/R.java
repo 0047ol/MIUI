@@ -1308,6 +1308,18 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int menu=0x7f01002f;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static int mhv_HeightDimen=0x7f01013b;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a floating point value, such as "<code>1.2</code>".
+         */
+        public static int mhv_HeightRatio=0x7f01013a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -2670,8 +2682,8 @@ containing a value of this type.
         public static int toast_image=0x7f020074;
     }
     public static final class id {
-        public static int Edits=0x7f060082;
-        public static int action0=0x7f06008e;
+        public static int Edits=0x7f060084;
+        public static int action0=0x7f060090;
         public static int action_bar=0x7f060064;
         public static int action_bar_activity_content=0x7f060006;
         public static int action_bar_container=0x7f060063;
@@ -2679,17 +2691,17 @@ containing a value of this type.
         public static int action_bar_spinner=0x7f060007;
         public static int action_bar_subtitle=0x7f060042;
         public static int action_bar_title=0x7f060041;
-        public static int action_container=0x7f06008b;
+        public static int action_container=0x7f06008d;
         public static int action_context_bar=0x7f060065;
-        public static int action_divider=0x7f060092;
-        public static int action_image=0x7f06008c;
+        public static int action_divider=0x7f060094;
+        public static int action_image=0x7f06008e;
         public static int action_menu_divider=0x7f060008;
         public static int action_menu_presenter=0x7f060009;
         public static int action_mode_bar=0x7f060061;
         public static int action_mode_bar_stub=0x7f060060;
         public static int action_mode_close_button=0x7f060043;
-        public static int action_text=0x7f06008d;
-        public static int actions=0x7f06009b;
+        public static int action_text=0x7f06008f;
+        public static int actions=0x7f06009d;
         public static int activity_chooser_view_content=0x7f060044;
         public static int add=0x7f060038;
         public static int alertTitle=0x7f060058;
@@ -2699,21 +2711,21 @@ containing a value of this type.
         public static int beginning=0x7f06003a;
         public static int bottom=0x7f060015;
         public static int buttonPanel=0x7f06004b;
-        public static int cancel_action=0x7f06008f;
+        public static int cancel_action=0x7f060091;
         public static int center=0x7f060016;
         public static int center_horizontal=0x7f060017;
         public static int center_vertical=0x7f060018;
         public static int checkbox=0x7f06005b;
-        public static int chronometer=0x7f060097;
+        public static int chronometer=0x7f060099;
         public static int clip_horizontal=0x7f060022;
         public static int clip_vertical=0x7f060023;
         public static int collapseActionView=0x7f06003d;
         public static int contentPanel=0x7f06004e;
         public static int custom=0x7f060055;
         public static int customPanel=0x7f060054;
-        public static int custom_miui_dialog_button=0x7f060085;
-        public static int custom_miui_dialog_title=0x7f060080;
-        public static int custom_miui_dialog_view=0x7f060081;
+        public static int custom_miui_dialog_button=0x7f060087;
+        public static int custom_miui_dialog_title=0x7f060081;
+        public static int custom_miui_dialog_view=0x7f060083;
         public static int decor_content_parent=0x7f060062;
         public static int default_activity_button=0x7f060047;
         public static int design_bottom_sheet=0x7f060076;
@@ -2724,7 +2736,7 @@ containing a value of this type.
         public static int disableHome=0x7f060032;
         public static int edit_query=0x7f060066;
         public static int end=0x7f060019;
-        public static int end_padder=0x7f0600a1;
+        public static int end_padder=0x7f0600a3;
         public static int enterAlways=0x7f06000f;
         public static int enterAlwaysCollapsed=0x7f060010;
         public static int exitUntilCollapsed=0x7f060011;
@@ -2737,45 +2749,46 @@ containing a value of this type.
         public static int home=0x7f06000a;
         public static int homeAsUp=0x7f060033;
         public static int icon=0x7f060049;
-        public static int icon_group=0x7f06009c;
+        public static int icon_group=0x7f06009e;
         public static int ifRoom=0x7f06003e;
         public static int image=0x7f060046;
-        public static int info=0x7f060098;
+        public static int info=0x7f06009a;
         public static int item_touch_helper_previous_elevation=0x7f060002;
-        public static int iv=0x7f0600a6;
+        public static int iv=0x7f0600a8;
         public static int largeLabel=0x7f060074;
+        public static int layout_s=0x7f06007f;
         public static int left=0x7f06001b;
-        public static int line1=0x7f06009d;
-        public static int line3=0x7f06009f;
+        public static int line1=0x7f06009f;
+        public static int line3=0x7f0600a1;
         public static int listMode=0x7f060030;
         public static int list_item=0x7f060048;
-        public static int masked=0x7f0600a8;
-        public static int media_actions=0x7f060091;
+        public static int masked=0x7f0600aa;
+        public static int media_actions=0x7f060093;
         public static int middle=0x7f06003b;
         public static int mini=0x7f060027;
         public static int multiply=0x7f06002b;
         public static int navigation_header_container=0x7f060079;
-        public static int negative_button=0x7f060088;
-        public static int neutral_button=0x7f060086;
-        public static int neutral_view=0x7f060087;
+        public static int negative_button=0x7f06008a;
+        public static int neutral_button=0x7f060088;
+        public static int neutral_view=0x7f060089;
         public static int never=0x7f06003f;
         public static int none=0x7f06001f;
         public static int normal=0x7f060028;
-        public static int notification_background=0x7f06009a;
-        public static int notification_main_column=0x7f060094;
-        public static int notification_main_column_container=0x7f060093;
+        public static int notification_background=0x7f06009c;
+        public static int notification_main_column=0x7f060096;
+        public static int notification_main_column_container=0x7f060095;
         public static int parallax=0x7f060020;
-        public static int parallax_s=0x7f06007f;
+        public static int parallax_s=0x7f060080;
         public static int parentPanel=0x7f06004d;
         public static int pin=0x7f060021;
-        public static int positive_button=0x7f06008a;
-        public static int positive_view=0x7f060089;
+        public static int positive_button=0x7f06008c;
+        public static int positive_view=0x7f06008b;
         public static int progress_circular=0x7f06000b;
         public static int progress_horizontal=0x7f06000c;
         public static int radio=0x7f06005d;
         public static int right=0x7f06001c;
-        public static int right_icon=0x7f060099;
-        public static int right_side=0x7f060095;
+        public static int right_icon=0x7f06009b;
+        public static int right_side=0x7f060097;
         public static int screen=0x7f06002c;
         public static int scroll=0x7f060012;
         public static int scrollIndicatorDown=0x7f060053;
@@ -2797,8 +2810,8 @@ containing a value of this type.
         public static int showCustom=0x7f060034;
         public static int showHome=0x7f060035;
         public static int showTitle=0x7f060036;
-        public static int single_choice_item_checkbox=0x7f0600a2;
-        public static int single_click_item_text=0x7f0600a3;
+        public static int single_choice_item_checkbox=0x7f0600a4;
+        public static int single_click_item_text=0x7f0600a5;
         public static int smallLabel=0x7f060073;
         public static int snackbar_action=0x7f060078;
         public static int snackbar_text=0x7f060077;
@@ -2809,23 +2822,23 @@ containing a value of this type.
         public static int src_in=0x7f06002e;
         public static int src_over=0x7f06002f;
         public static int start=0x7f06001d;
-        public static int status_bar_latest_event_content=0x7f060090;
+        public static int status_bar_latest_event_content=0x7f060092;
         public static int submenuarrow=0x7f06005e;
         public static int submit_area=0x7f06006f;
         public static int tabMode=0x7f060031;
-        public static int text=0x7f0600a0;
-        public static int text2=0x7f06009e;
+        public static int text=0x7f0600a2;
+        public static int text2=0x7f0600a0;
         public static int textSpacerNoButtons=0x7f060052;
         public static int textSpacerNoTitle=0x7f060051;
         public static int text_input_password_toggle=0x7f06007e;
         public static int textinput_counter=0x7f060003;
         public static int textinput_error=0x7f060004;
-        public static int time=0x7f060096;
+        public static int time=0x7f060098;
         public static int title=0x7f06004a;
         public static int titleDividerNoCustom=0x7f060059;
         public static int title_template=0x7f060057;
-        public static int toast_bg=0x7f0600a5;
-        public static int toast_layout=0x7f0600a4;
+        public static int toast_bg=0x7f0600a7;
+        public static int toast_layout=0x7f0600a6;
         public static int top=0x7f06001e;
         public static int topPanel=0x7f060056;
         public static int touch_outside=0x7f060075;
@@ -2833,10 +2846,11 @@ containing a value of this type.
         public static int transition_scene_layoutid_cache=0x7f060001;
         public static int up=0x7f06000e;
         public static int useLogo=0x7f060037;
-        public static int v1=0x7f060084;
-        public static int v2=0x7f060083;
+        public static int v1=0x7f060086;
+        public static int v2=0x7f060085;
+        public static int v_3=0x7f060082;
         public static int view_offset_helper=0x7f060005;
-        public static int visible=0x7f0600a7;
+        public static int visible=0x7f0600a9;
         public static int withText=0x7f060040;
         public static int wrap_content=0x7f060039;
     }
@@ -2894,29 +2908,30 @@ containing a value of this type.
         public static int design_navigation_menu_item=0x7f030027;
         public static int design_text_input_password_icon=0x7f030028;
         public static int linearlayout=0x7f030029;
-        public static int miui_dialog_layout=0x7f03002a;
-        public static int notification_action=0x7f03002b;
-        public static int notification_action_tombstone=0x7f03002c;
-        public static int notification_media_action=0x7f03002d;
-        public static int notification_media_cancel_action=0x7f03002e;
-        public static int notification_template_big_media=0x7f03002f;
-        public static int notification_template_big_media_custom=0x7f030030;
-        public static int notification_template_big_media_narrow=0x7f030031;
-        public static int notification_template_big_media_narrow_custom=0x7f030032;
-        public static int notification_template_custom_big=0x7f030033;
-        public static int notification_template_icon_group=0x7f030034;
-        public static int notification_template_lines_media=0x7f030035;
-        public static int notification_template_media=0x7f030036;
-        public static int notification_template_media_custom=0x7f030037;
-        public static int notification_template_part_chronometer=0x7f030038;
-        public static int notification_template_part_time=0x7f030039;
-        public static int select_dialog_item_material=0x7f03003a;
-        public static int select_dialog_multichoice_material=0x7f03003b;
-        public static int select_dialog_singlechoice_material=0x7f03003c;
-        public static int single_choice_items=0x7f03003d;
-        public static int single_click_item=0x7f03003e;
-        public static int support_simple_spinner_dropdown_item=0x7f03003f;
-        public static int toast_layout=0x7f030040;
+        public static int listview_layout=0x7f03002a;
+        public static int miui_dialog_layout=0x7f03002b;
+        public static int notification_action=0x7f03002c;
+        public static int notification_action_tombstone=0x7f03002d;
+        public static int notification_media_action=0x7f03002e;
+        public static int notification_media_cancel_action=0x7f03002f;
+        public static int notification_template_big_media=0x7f030030;
+        public static int notification_template_big_media_custom=0x7f030031;
+        public static int notification_template_big_media_narrow=0x7f030032;
+        public static int notification_template_big_media_narrow_custom=0x7f030033;
+        public static int notification_template_custom_big=0x7f030034;
+        public static int notification_template_icon_group=0x7f030035;
+        public static int notification_template_lines_media=0x7f030036;
+        public static int notification_template_media=0x7f030037;
+        public static int notification_template_media_custom=0x7f030038;
+        public static int notification_template_part_chronometer=0x7f030039;
+        public static int notification_template_part_time=0x7f03003a;
+        public static int select_dialog_item_material=0x7f03003b;
+        public static int select_dialog_multichoice_material=0x7f03003c;
+        public static int select_dialog_singlechoice_material=0x7f03003d;
+        public static int single_choice_items=0x7f03003e;
+        public static int single_click_item=0x7f03003f;
+        public static int support_simple_spinner_dropdown_item=0x7f030040;
+        public static int toast_layout=0x7f030041;
     }
     public static final class string {
         public static int abc_action_bar_home_description=0x7f0b0008;
@@ -7452,6 +7467,45 @@ containing a value of this type.
           @attr name android:dropDownVerticalOffset
         */
         public static int ListPopupWindow_android_dropDownVerticalOffset = 1;
+        /** Attributes that can be used with a MaxHeightView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MaxHeightView_mhv_HeightDimen com.miui8.widget:mhv_HeightDimen}</code></td><td></td></tr>
+           <tr><td><code>{@link #MaxHeightView_mhv_HeightRatio com.miui8.widget:mhv_HeightRatio}</code></td><td></td></tr>
+           </table>
+           @see #MaxHeightView_mhv_HeightDimen
+           @see #MaxHeightView_mhv_HeightRatio
+         */
+        public static final int[] MaxHeightView = {
+            0x7f01013a, 0x7f01013b
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.miui8.widget.R.attr#mhv_HeightDimen}
+          attribute's value can be found in the {@link #MaxHeightView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name com.miui8.widget:mhv_HeightDimen
+        */
+        public static int MaxHeightView_mhv_HeightDimen = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.miui8.widget.R.attr#mhv_HeightRatio}
+          attribute's value can be found in the {@link #MaxHeightView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a floating point value, such as "<code>1.2</code>".
+          @attr name com.miui8.widget:mhv_HeightRatio
+        */
+        public static int MaxHeightView_mhv_HeightRatio = 0;
         /** Attributes that can be used with a MenuGroup.
            <p>Includes the following attributes:</p>
            <table>

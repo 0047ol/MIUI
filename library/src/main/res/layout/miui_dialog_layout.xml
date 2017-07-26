@@ -1,108 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:background="@drawable/alert_dialog_bg"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
 
-	<TextView
-		android:gravity="center"
-		android:id="@+id/custom_miui_dialog_title"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="28dp"
-		style="@style/DialogTitle"/>
-
 	<LinearLayout
-		android:layout_marginTop="18dp"
-		android:layout_height="0dp"
+		android:orientation="vertical"
+		android:background="@drawable/alert_dialog_bg"
 		android:layout_width="match_parent"
-		android:layout_weight="1"
-		android:orientation="vertical">
+		android:layout_height="wrap_content">
 
-		<FrameLayout
-			android:id="@+id/custom_miui_dialog_view"
-			android:layout_height="wrap_content"
-			android:layout_width="match_parent"/>
-
-		<EditText
-			android:id="@+id/Edits"
+		<TextView
+			android:gravity="center"
+			android:id="@+id/custom_miui_dialog_title"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:textCursorDrawable="@drawable/color_cursor"
-			android:background="@drawable/edit_text_bg"
-			android:maxLines="3"
-			android:layout_marginLeft="40dp"
-			android:layout_marginRight="40dp"
-			android:layout_marginTop="15dp"
-			android:textColorHint="#5B5A5A"
-			android:textSize="13sp"
-			android:layout_marginBottom="5dp"/>
-	
-	</LinearLayout>
+			android:layout_marginTop="28dp"
+			style="@style/DialogTitle"/>
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/v2"
-		android:orientation="horizontal"
-		android:layout_marginTop="30dp">
+		<LinearLayout
+			android:layout_marginTop="18dp"
+			android:layout_height="0dp"
+			android:layout_width="match_parent"
+			android:layout_weight="1"
+			android:orientation="vertical">
 
-		<View
-			android:gravity="center"
+			<View
+				android:gravity="center"
+				android:orientation="horizontal"
+				android:id="@+id/v_3"
+				android:background="#F2B6B6B6"
+				android:layout_width="match_parent"
+				android:layout_height="0.4dp"/>
+			
+			<com.miui8.widget.MaxHeightView
+				android:id="@+id/custom_miui_dialog_view"
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginTop="-1dp"/>
+			<EditText
+				android:id="@+id/Edits"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textCursorDrawable="@drawable/color_cursor"
+				android:background="@drawable/edit_text_bg"
+				android:maxLines="3"
+				android:layout_marginLeft="36dp"
+				android:layout_marginRight="36dp"
+				android:layout_marginTop="15dp"
+				android:textColorHint="#5B5A5A"
+				android:textSize="13sp"
+				android:layout_marginBottom="15dp"
+				android:selectAllOnFocus="true"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/v2"
 			android:orientation="horizontal"
-			android:id="@+id/v1"
-			android:background="#F2B6B6B6"
+			android:layout_marginTop="23dp">
+
+			<View
+				android:gravity="center"
+				android:orientation="horizontal"
+				android:id="@+id/v1"
+				android:background="#F2B6B6B6"
+				android:layout_width="match_parent"
+				android:layout_height="0.4dp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
 			android:layout_width="match_parent"
-			android:layout_height="0.4dp"/>
+			android:layout_height="match_parent"
+			android:orientation="horizontal"
+			android:id="@+id/custom_miui_dialog_button"
+			android:layout_gravity="center">
+
+			<Button
+				android:gravity="center"
+				android:id="@+id/neutral_button"
+				android:layout_width="0dp"
+				android:layout_height="53dp"
+				android:layout_weight="1"
+				style="?android:attr/borderlessButtonStyle"/>
+
+			<View
+				android:background="#F2B6B6B6"
+				android:layout_width="0.3dip"
+				android:id="@+id/neutral_view"
+				android:layout_height="fill_parent"/>
+
+			<Button
+				android:gravity="center"
+				android:id="@+id/negative_button"
+				android:layout_width="0dp"
+				android:layout_height="53dp"
+				android:layout_weight="1"
+				style="?android:attr/borderlessButtonStyle"/>
+
+			<View
+				android:background="#F2B6B6B6"
+				android:layout_width="0.3dip"
+				android:id="@+id/positive_view"
+				android:layout_height="fill_parent"/>
+
+			<Button
+				android:gravity="center"
+				android:id="@+id/positive_button"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				style="?android:attr/borderlessButtonStyle"
+				android:layout_height="53dp"/>
+
+		</LinearLayout>
 
 	</LinearLayout>
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:orientation="horizontal"
-		android:id="@+id/custom_miui_dialog_button"
-		android:layout_gravity="center">
-
-		<Button
-			android:gravity="center"
-			android:id="@+id/neutral_button"
-			android:layout_width="0dp"
-			android:layout_height="53dp"
-			android:layout_weight="1"
-			style="?android:attr/borderlessButtonStyle"/>
-
-		<View
-			android:background="#F2B6B6B6"
-			android:layout_width="0.3dip"
-			android:id="@+id/neutral_view"
-			android:layout_height="fill_parent"/>
-
-		<Button
-			android:gravity="center"
-			android:id="@+id/negative_button"
-			android:layout_width="0dp"
-			android:layout_height="53dp"
-			android:layout_weight="1"
-			style="?android:attr/borderlessButtonStyle"/>
-
-		<View
-			android:background="#F2B6B6B6"
-			android:layout_width="0.3dip"
-			android:id="@+id/positive_view"
-			android:layout_height="fill_parent"/>
-
-		<Button
-			android:gravity="center"
-			android:id="@+id/positive_button"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			style="?android:attr/borderlessButtonStyle"
-			android:layout_height="53dp"/>
-
-	</LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
 

@@ -40,7 +40,7 @@
 				android:paddingTop="2dp"
 				android:textSize="15sp"
 				android:textColor="#484848"
-				android:text="调试"
+				android:text="MIUI"
 				android:textStyle="bold"/>
 
 		</LinearLayout>

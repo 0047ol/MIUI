@@ -6,10 +6,9 @@
 	android:orientation="vertical"
 	android:background="#FFFFFF">
 
-	<com.miui8.widget.MIUI8LinearLayout
+	<com.miui8.widget.MIUI8ScrollView
 		android:layout_height="wrap_content"
 		android:layout_width="match_parent"
-		android:padding="20dp"
 		android:background="#FFFFFF"
 		android:layout_marginTop="50dp">
 
@@ -31,7 +30,8 @@
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginBottom="5dp"
-				android:text="一个按钮"/>
+				android:textAllCaps="false"
+				android:text="One Button"/>
 
 			<Button
 				android:layout_height="wrap_content"
@@ -44,7 +44,8 @@
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginBottom="5dp"
-				android:text="两个按钮"/>
+				android:textAllCaps="false"
+				android:text="Two Button"/>
 
 			<Button
 				android:layout_height="wrap_content"
@@ -57,7 +58,8 @@
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginBottom="5dp"
-				android:text="三个按钮"/>
+				android:textAllCaps="false"
+				android:text="Three Button"/>
 
 			<Button
 				android:layout_height="wrap_content"
@@ -70,7 +72,8 @@
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginBottom="5dp"
-				android:text="自定义视图"/>
+				android:textAllCaps="false"
+				android:text="CustomLayout"/>
 
 			<Button
 				android:layout_height="wrap_content"
@@ -83,7 +86,8 @@
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginBottom="5dp"
-				android:text="输入框"/>
+				android:textAllCaps="false"
+				android:text="EditText"/>
 
 			<Button
 				android:layout_height="wrap_content"
@@ -96,7 +100,8 @@
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginBottom="5dp"
-				android:text="单选列表"/>
+				android:textAllCaps="false"
+				android:text="SingleChoiceItem"/>
 
 			<Button
 				android:layout_height="wrap_content"
@@ -109,11 +114,12 @@
 				android:layout_marginLeft="20dp"
 				android:layout_marginRight="20dp"
 				android:layout_marginBottom="5dp"
-				android:text="多选列表"/>
+				android:textAllCaps="false"
+				android:text="MultiChoiceItem"/>
 
 		</LinearLayout>
 
-	</com.miui8.widget.MIUI8LinearLayout>
+	</com.miui8.widget.MIUI8ScrollView>
 
 </LinearLayout>
 

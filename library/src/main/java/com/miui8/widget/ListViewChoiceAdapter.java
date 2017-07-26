@@ -48,7 +48,7 @@ public class ListViewChoiceAdapter extends BaseAdapter{
 		if (view == null) {
 			view = lInflater.inflate(R.layout.single_choice_items, parent, false);
 		}
-		((TextView) view.findViewById(R.id.single_choice_item_checkbox)).setText(data.get(position));
+		((TextView) view.findViewById(R.id.single_choice_item_checkbox)).setText(" "+data.get(position));
 
 		return view;
 	}

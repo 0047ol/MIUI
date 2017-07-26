@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui8.widget.MIUI8ListView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	android:id="@+id/parallax_s"
+	android:cacheColorHint="@android:color/transparent"
+	android:scrollbars="none"
+	android:overScrollMode="never"
+	
+	android:background="@drawable/item_select_bg">
+
+</com.miui8.widget.MIUI8ListView>
+

@@ -1,30 +1,22 @@
 package com.miui8.widget;
 
-import java.util.List;
-import android.graphics.Color;
-import android.app.Dialog;
-import android.content.Context;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
-import android.widget.EditText;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.FrameLayout;
-import android.widget.ScrollView;
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
-import android.widget.Gallery.LayoutParams;
-import android.widget.AdapterView.OnItemClickListener;
-import android.graphics.drawable.*;
-import android.view.*;
-import android.widget.*;
+import android.*;
+import android.app.*;
+import android.content.*;
 import android.content.res.*;
+import android.graphics.*;
+import android.graphics.drawable.*;
+import android.util.*;
+import android.view.*;
+import android.view.View.*;
+import android.widget.*;
+import android.widget.AdapterView.*;
+import android.widget.Gallery.*;
+import java.util.*;
+
+import android.view.View.OnClickListener;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Gallery.LayoutParams;
 import android.support.v7.widget.*;
 
 public class MIUIDialog
@@ -54,8 +46,8 @@ public class MIUIDialog
     private boolean isListView2=false;
     private boolean isListView3=false;
     private boolean isListView4=false;
-	private boolean isListView5=false;
-    private boolean isListView6=false;
+	//private boolean isListView5=false;
+    //private boolean isListView6=false;
     //private int postion;
     private View mView;
     //private LinearLayout layouts;
@@ -72,6 +64,8 @@ public class MIUIDialog
 	private int mViewId=0;
 	private boolean CanceledOnTouchOutside=true;
 	private boolean Cancelable=true;
+	
+
 	// EditText Edits = (EditText) findViewById(R.id.Edits);
 
     public MIUIDialog show()
@@ -112,6 +106,8 @@ public class MIUIDialog
 		private View v1view;
 		private View neutralview;
 		private View positiveview;
+		private View v3;
+		//private ListView l;
 		//private ScrollView scrollView;
 
         private Builder()
@@ -150,12 +146,14 @@ public class MIUIDialog
 			PositiveButton.setTextColor(Color.parseColor("#ff35a7ff"));
 			NegativeButton.setTextColor(Color.parseColor("#ff6c6c6c"));
 			NeutralButton.setTextColor(Color.parseColor("#ff6c6c6c"));
+			v3 =(View)dialog.findViewById(R.id.v_3);
+			//mChoiceList= (ListView)dialog.findViewById(R.id.parallax_s);
 			Edits.setVisibility(View.GONE);
-			//scrollView.setVisibility(View.GONE);
+			v3.setVisibility(View.GONE);
 			
             ScrollView scrollView=new ScrollView(mContext);
             mMessage = new TextView(mContext);
-            mMessage.setPadding(90, 0, 90, 10);
+            mMessage.setPadding(110, 0, 110, 8);
             mMessage.setTextColor(Color.parseColor("#5B5A5A"));
             mMessage.setTextSize(14);
             mMessage.setLineSpacing(1, 1.3f);
@@ -165,19 +163,7 @@ public class MIUIDialog
 			
             if (isEditText == true)
 			{
-//                LinearLayout layout=new LinearLayout(mContext);
-//				LayoutInflater inflater = LayoutInflater.from(mContext);
-//                LinearLayout layout = (LinearLayout) inflater.inflate(
-//					R.layout.dialog_edittext, null).findViewById(R.id.EditLayout);
-//				EditText Edits = (EditText) LayoutInflater.from(mContext).inflate(R.layout.dialog_edittext, null).findViewById(R.id.Edits);
-//		        layout.setPadding(60,40,60,90);
 				Edits.setVisibility(View.VISIBLE);
-//                Edits=new EditText(mContext);
-//                Edits.setLayoutParams(new ViewGroup.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
-//                Edits.setBackgroundResource(R.drawable.edit_text_bg);
-//                Edits.setTextSize(14);
-//      			Edits.setHintTextColor(Color.parseColor("#5B5A5A"));
-//                Edits.setMaxLines(3);
 
                 if (EditTextId == 0 && getEditText() != null)
 				{
@@ -195,21 +181,19 @@ public class MIUIDialog
 				{
                     Edits.setHint(hintId);
                 }
-//                layout.addView(mEdit);
-//                mFrameLayout.addView(layout);
-				
             }
             if (isListView1 == true || isListView2 == true)
 			{
-//                LinearLayout l=new LinearLayout(mContext);
-//                l.setOrientation(LinearLayout.VERTICAL);
+				v3.setVisibility(View.VISIBLE);
+				
 				LayoutInflater inflater = LayoutInflater.from(mContext);
-				LinearLayout l = (LinearLayout) inflater.inflate(R.layout.linearlayout,null).findViewById(R.id.parallax_s);
+				LinearLayout l = (LinearLayout) inflater.inflate(R.layout.linearlayout,null).findViewById(R.id.layout_s);
                 View v=new View(mContext);
                 v.setBackgroundColor(Color.parseColor("#F2B6B6B6"));
                 v.setLayoutParams(new ViewGroup.LayoutParams(LayoutParams.MATCH_PARENT, 1));
                 l.addView(v);
-                mChoiceList = new ListView(mContext);
+//                mChoiceList = new ListView(mContext);
+				mChoiceList = (MIUI8ListView) inflater.inflate(R.layout.listview_layout,null).findViewById(R.id.parallax_s);
 				mChoiceList.setDivider(new ColorDrawable(0xF2B6B6B6));
 				mChoiceList.setDividerHeight(1);
                 if (isListView1 == true && isListView2 == false)
@@ -224,25 +208,24 @@ public class MIUIDialog
                 mChoiceList.setItemChecked(defItem, true);
                 mChoiceList.setOnItemClickListener(mlistener);
                 ChoiceList = mChoiceList;
-                //values= mChoiceList.isItemChecked(postion);
                 l.addView(mChoiceList);
                 mFrameLayout.addView(l);
 			}
            
 			if (isListView3 == true || isListView4 == true)
 			{
+				v3.setVisibility(View.VISIBLE);
 				LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);  
-				lp.setMargins(0,0,-30,0);  
+				lp.setMargins(0,0,-23,0);  
 				v2.setLayoutParams(lp); 
-//				LinearLayout l=new LinearLayout(mContext);
-//                l.setOrientation(LinearLayout.VERTICAL);
 				LayoutInflater inflater = LayoutInflater.from(mContext);
-				LinearLayout l = (LinearLayout) inflater.inflate(R.layout.linearlayout,null).findViewById(R.id.parallax_s);
+				LinearLayout l = (LinearLayout) inflater.inflate(R.layout.linearlayout,null).findViewById(R.id.layout_s);
                 View v=new View(mContext);
                 v.setBackgroundColor(Color.parseColor("#F2B6B6B6"));
                 v.setLayoutParams(new ViewGroup.LayoutParams(LayoutParams.MATCH_PARENT, 1));
                 l.addView(v);
-                mList = new ListView(mContext);
+				mList = (ListView) inflater.inflate(R.layout.listview_layout,null).findViewById(R.id.parallax_s);
+                //mList = new ListView(mContext);
 				mList.setDivider(new ColorDrawable(0xF2B6B6B6));
 				mList.setDividerHeight(1);
                 if (isListView3 == true && isListView4 == false)
@@ -262,14 +245,20 @@ public class MIUIDialog
             }
             if (mViewId != 0 && mView == null)
 			{
+				LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);  
+				lp.setMargins(0,0,-23,0);  
+				v2.setLayoutParams(lp); 
 				LayoutInflater inflater = LayoutInflater.from(mContext);
 				LinearLayout mView = (LinearLayout) inflater.inflate(mViewId, null); 
-                mView.setPadding(50, 0, 50, 0);
+                mView.setPadding(50,0,50,0);
                 mFrameLayout.addView(mView);
 			}
             else if (mViewId == 0 && mView != null)
 			{
-				mView.setPadding(50, 0, 50, 0);
+				LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);  
+				lp.setMargins(0,0,-23,0);  
+				v2.setLayoutParams(lp); 
+				mView.setPadding(50,0,50,50);
                 mFrameLayout.addView(mView);
             }
 			
