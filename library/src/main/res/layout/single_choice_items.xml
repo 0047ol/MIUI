@@ -2,6 +2,7 @@
 <com.miui8.widget.CheckableRelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
+	
 	android:layout_height="48dp">
 
 	<CheckBox

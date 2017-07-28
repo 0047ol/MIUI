@@ -1,125 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.miui8.widget.MIUI8RecyclerView
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical"
-	android:background="#FFFFFF">
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/recycler_view"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:scrollbars="vertical"
+	tools:context="com.miui8.widget.RecyclerViewLinearActivity"
+	android:layout_marginTop="50dp"
+	android:background="#FFF7F7F7">
 
-	<com.miui8.widget.MIUI8ScrollView
-		android:layout_height="wrap_content"
-		android:layout_width="match_parent"
-		android:background="#FFFFFF"
-		android:layout_marginTop="50dp">
-
-		<LinearLayout
-			android:layout_height="wrap_content"
-			android:layout_width="match_parent"
-			android:gravity="top|center"
-			android:orientation="vertical"
-			android:background="#FFFFFF">
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:layout_marginTop="5dp"
-				android:id="@+id/one"
-				android:textColor="#FF333333"
-				style="?android:attr/buttonBarButtonStyle"
-				android:background="@drawable/miui8_ota_button"
-				android:layout_marginLeft="20dp"
-				android:layout_marginRight="20dp"
-				android:layout_marginBottom="5dp"
-				android:textAllCaps="false"
-				android:text="One Button"/>
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:layout_marginTop="5dp"
-				android:id="@+id/two"
-				android:textColor="#FF333333"
-				style="?android:attr/buttonBarButtonStyle"
-				android:background="@drawable/miui8_ota_button"
-				android:layout_marginLeft="20dp"
-				android:layout_marginRight="20dp"
-				android:layout_marginBottom="5dp"
-				android:textAllCaps="false"
-				android:text="Two Button"/>
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:layout_marginTop="5dp"
-				android:id="@+id/three"
-				android:textColor="#FF333333"
-				style="?android:attr/buttonBarButtonStyle"
-				android:background="@drawable/miui8_ota_button"
-				android:layout_marginLeft="20dp"
-				android:layout_marginRight="20dp"
-				android:layout_marginBottom="5dp"
-				android:textAllCaps="false"
-				android:text="Three Button"/>
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:layout_marginTop="5dp"
-				android:id="@+id/view_dialog"
-				android:textColor="#FF333333"
-				style="?android:attr/buttonBarButtonStyle"
-				android:background="@drawable/miui8_ota_button"
-				android:layout_marginLeft="20dp"
-				android:layout_marginRight="20dp"
-				android:layout_marginBottom="5dp"
-				android:textAllCaps="false"
-				android:text="CustomLayout"/>
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:layout_marginTop="5dp"
-				android:id="@+id/edit_dialog"
-				android:textColor="#FF333333"
-				style="?android:attr/buttonBarButtonStyle"
-				android:background="@drawable/miui8_ota_button"
-				android:layout_marginLeft="20dp"
-				android:layout_marginRight="20dp"
-				android:layout_marginBottom="5dp"
-				android:textAllCaps="false"
-				android:text="EditText"/>
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:layout_marginTop="5dp"
-				android:id="@+id/single_choice_dialog"
-				android:textColor="#FF333333"
-				style="?android:attr/buttonBarButtonStyle"
-				android:background="@drawable/miui8_ota_button"
-				android:layout_marginLeft="20dp"
-				android:layout_marginRight="20dp"
-				android:layout_marginBottom="5dp"
-				android:textAllCaps="false"
-				android:text="SingleChoiceItem"/>
-
-			<Button
-				android:layout_height="wrap_content"
-				android:layout_width="match_parent"
-				android:layout_marginTop="5dp"
-				android:id="@+id/multi_choices_dialog"
-				android:textColor="#FF333333"
-				style="?android:attr/buttonBarButtonStyle"
-				android:background="@drawable/miui8_ota_button"
-				android:layout_marginLeft="20dp"
-				android:layout_marginRight="20dp"
-				android:layout_marginBottom="5dp"
-				android:textAllCaps="false"
-				android:text="MultiChoiceItem"/>
-
-		</LinearLayout>
-
-	</com.miui8.widget.MIUI8ScrollView>
-
-</LinearLayout>
+</com.miui8.widget.MIUI8RecyclerView>
 

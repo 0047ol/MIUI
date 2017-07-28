@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="52.0dip">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<LinearLayout
+			android:gravity="center_vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:background="@drawable/common_bg">
+
+			<TextView
+				android:textColor="#FF4D4D4D"
+				android:id="@+id/text_item"
+				android:padding="15.0dip"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="12.0dip"
+				android:layout_alignParentLeft="true"/>
+
+			<LinearLayout
+				android:gravity="center_vertical|end"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+
+				<ImageView
+					android:layout_width="25.0px"
+					android:layout_height="41.0px"
+					android:layout_marginRight="18.0dip"
+					android:src="@drawable/miui_go"
+					android:scaleType="fitXY"
+					android:adjustViewBounds="true"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<View
+			android:background="#DDDDDD"
+			android:layout_width="fill_parent"
+			android:layout_height="0.5dip"
+			android:layout_marginLeft="27.0dip"
+			android:layout_gravity="bottom"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="-0.8dp"/>
+
+	</RelativeLayout>
+
+</RelativeLayout>
+

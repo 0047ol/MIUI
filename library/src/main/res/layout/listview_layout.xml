@@ -7,8 +7,9 @@
 	android:cacheColorHint="@android:color/transparent"
 	android:scrollbars="none"
 	android:overScrollMode="never"
-	
-	android:background="@drawable/item_select_bg">
+	android:drawSelectorOnTop="false"
+	android:listSelector="@drawable/selcommon_bg"
+	android:background="@android:color/transparent">
 
 </com.miui8.widget.MIUI8ListView>
 
